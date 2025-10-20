@@ -1,95 +1,124 @@
 <!doctype html>
 <html lang="es">
 <head>
+        <link rel="stylesheet" href="Tabla.css">
         <meta chartset="UTF-8">
         <title>Formulario</title>
 </head>
 <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="index.html">Página principal</a></li>
-        </ul>
-      </nav>
-    </header>
+
     <form>
-       <p> <label>Nombre: <input type="text" maxlength="20"></label> </p>
-       <p> <label>Apellido: <input type="text" maxlength="20"></label> </p>
-       <p> <label>Email: <input type="email"></label> </p>
-       <p> <label>Teléfono: <input type="tel" placeholder="2920-555555" maxlength="10"></label> </p>
-       <p> <label>Edad: <input type="number" min="16" max="120"></label></p> 
-       <p> <label>Dirección: <textarea col="2" row="2"></textarea></label></p>
-       <p> <label>Provincia: <textarea col="2" row="2"></textarea></label></p>
-       <p> <label>Provincia Patagónica:<select>
-                                        <option value="Neuquén">Neuquén</option>
-                                        <option value="Río Negro">Río Negro</option>
-                                        <option value="Chubut">Chubut</option>
-                                        <option value="Santa Cruz">Santa Cruz</option>
-                                        <option value="Tierra del Fuego">Tierra del Fuego</option>
-                                        </select></label></p>
-       <p> <label>Código Postal:<input type="text" maxlength="8" pattern="[A-Z]{1}[0-9]{4}[A-Z]{3}"></label></p>
+       <p> <label for="nombre">Nombre:</label> 
+          <input type="text" maxlength="20" id="nombre" name="nombre" required>
+      </p>
+       <p> <label for="apellido">Apellido:</label> 
+            <input type="text" maxlength="20" id="apellido" name="apellido">
+      </p>
+       <p> <label for="email">Email:</label> 
+            <input type="email" id="email" name="email" required>
+      </p>
+       <p> <label for="telefono">Teléfono:</label> 
+            <input type="tel" placeholder="2920-555555" maxlength="10" id="telefono" name="telefono">
+      </p>
+       <p> <label for="edad">Edad:</label>
+            <input type="number" min="16" max="120" id="edad" name="edad">
+      </p> 
+       <p> <label for="direccion">Dirección:</label>
+            <textarea col="2" row="2" id="direccion" name="direccion"></textarea>
+      </p>
+       <p> <label for="provincia">Provincia:</label>
+            <input list="provincia">
+            <datalist id="provincia" name="provincia">
+                <option value="Neuquén">Neuquén</option>
+                <option value="Río Negro">Río Negro</option>
+                <option value="Chubut">Chubut</option>
+                <option value="Santa Cruz">Santa Cruz</option>
+                <option value="Tierra del Fuego">Tierra del Fuego</option>
+            </datalist>
+      </p>
+       <p> <label for="cp">Código Postal:</label>
+            <input type="text" maxlength="8" pattern="[A-Z]{1}[0-9]{4}[A-Z]{3}" id="cp" name="cp">
+      </p>
         
        <fieldset>
         <legend>Método de contacto preferido</legend>
-        <p><label><input type="radio" name="contacto" checked>Correo electrónico</label></p>
-        <p><label><input type="radio" name="contacto">Correo Postal</label></p>
-        <p><label><input type="radio" name="contacto">Teléfono</label></p> 
+        <p><label for="correoe">Correo electrónico</label>
+            <input type="radio" id="correoe" name="contacto" checked>
+        </p>
+        <p><label for="correop">Correo Postal</label>
+            <input type="radio" id="correop" name="contacto">
+        </p>
+        <p><label for="tel">Teléfono</label>
+            <input type="radio" id="tel" name="contacto">
+        </p> 
         </fieldset>
         
         <fieldset>
         <legend>Tipo de subscrupción</legend>
-        <p><label><input type="checkbox" value="Noticias">Noticias</label></p>
-        <p><label><input type="checkbox" value="Promociones">Promociones</label></p>
-        <p><label><input type="checkbox" value="Alertas" checked>Alertas</label></p> 
-        <p><label><input type="checkbox" value="Eventos">Eventos</label></p>       
+        <p><label for="noticias">Noticias</label>
+            <input type="checkbox" value="Noticias" id="noticias" nombre="noticias">
+        </p>
+        <p><label for="promociones">Promociones</label>
+            <input type="checkbox" value="Promociones" id="promociones" name="promociones">
+        </p>
+        <p><label for="alertas">Alertas</label>
+            <input type="checkbox" value="Alertas" checked id="alertas" name="alertas">
+        </p> 
+        <p><label for="eventos">Eventos</label>
+            <input type="checkbox" value="Eventos" id="eventos" name="eventos">
+        </p>       
         </fieldset>
         
         <p><button>Cargar</button></p>
 
-        <table bgcolor="grey">
+        <table>
+          <tr>
+            <th>Campo</th>
+            <th>Valor</th>
+          </tr>
           <tr>
             <td>Nombre</td>
-            <td>""</td>    
+            <td></td>
           </tr>
           <tr>
             <td>Apellido</td>
-            <td>""</td>    
+            <td></td>
           </tr>
           <tr>
-            <td>E-mail</td> 
-            <td>""</td>   
+            <td>E-mail</td>
+            <td></td> 
           </tr>
           <tr>
             <td>Teléfono</td>
-            <td>""</td>    
+            <td></td>  
           </tr>
           <tr>
             <td>Edad</td>
-            <td>""</td>    
+            <td></td>
           </tr>
           <tr>
-            <td>Dirección</td>
-            <td>""</td>    
+            <td>Dirección</td> 
+            <td></td>
           </tr>
           <tr>
             <td>Provincia</td>
-            <td>""</td>    
+            <td></td> 
           </tr>
           <tr>
             <td>Provincia Patagónica</td>
-            <td>""</td>    
+            <td></td>  
           </tr>
           <tr>
             <td>Código postal</td>
-            <td>""</td>    
+            <td></td>
           </tr>
           <tr>
             <td>Contacto preferido</td>
-            <td>""</td>    
+            <td></td>
           </tr>
           <tr>
-            <td>Tipo de subscripción</td>
-            <td>""</td>    
+            <td>Tipo de subscripción</td> 
+            <td></td>
           </tr>
         </table>
     </form>    
