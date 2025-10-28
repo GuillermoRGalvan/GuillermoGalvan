@@ -5,15 +5,37 @@ text-align: center;
 margin: 25px;
 padding: 25px;}
 
-header{background-color: grey;
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    background-color: coral;
+    align-items: center;
+    padding: 10px;
+
+    position: sticky;
+    top: 0;
+
     border-color: red;
 font-size: large;}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+nav a{
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+nav a:hover{
+    color: white;
+}
 
 footer{background-color: grey;
     border-color: red;
 border-style: solid;}
-
-nav ul{list-style-type: none;}
 
 aside {
         color: black; 
@@ -32,3 +54,12 @@ figure {
       border-radius: 12px;
       box-shadow: 0 6px 15px rgba(0,0,0,0.3);
     }
+
+figure:hover{
+    transform: rotatey(360deg);
+    transition: 1.5S;
+}
+
+p{
+    font-family: "Gravitas One", serif;
+}
