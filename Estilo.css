@@ -1,5 +1,6 @@
-body {background-color: black;
-color: white;
+body {
+    background-color: black;
+    color: white;
 font-family: Arial, Helvetica, sans-serif;
 text-align: center;
 margin: 25px;
@@ -17,7 +18,8 @@ header{
     top: 0;
 
     border-color: red;
-font-size: large;}
+    font-size: large;
+}
 
 a{
     text-decoration: none;
@@ -47,17 +49,19 @@ aside {
         min-width: 180px; /* Ancho mínimo para que no se contraigan demasiado */
         }
 
-figure {
-      display: inline-block;
-      padding: 15px;
-      background: #747171;
-      border-radius: 12px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-    }
+.imagen{
+    max-width: 10%;
+    height: auto;
+    animation: horizontal-spin 4s linear;
+}
 
-figure:hover{
-    transform: rotatey(360deg);
-    transition: 1.5S;
+.imagen2{
+    width: 1200px;
+}
+
+@keyframes horizontal-spin{
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }    
 }
 
 p{
