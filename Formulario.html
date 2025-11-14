@@ -82,9 +82,9 @@
         </p>       
         </fieldset>
         
-        <p><button>Cargar</button></p>
+        <p><button onclick="cargarTabla();">Cargar Tabla</button></p>
 
-        <table>
+        <table id="table">
           <tr>
             <th>Campo</th>
             <th>Valor</th>
@@ -118,10 +118,6 @@
             <td></td> 
           </tr>
           <tr>
-            <td>Provincia Patagónica</td>
-            <td></td>  
-          </tr>
-          <tr>
             <td>Código postal</td>
             <td></td>
           </tr>
@@ -135,5 +131,19 @@
           </tr>
         </table>
     </form>    
+    <script>
+      var table = document.getElementById("table"),rIndex;
+
+      function cargarTabla(){
+        table.rows[1].cells[1].innerHTML = document.getElementById("nombre").value;
+        table.rows[2].cells[1].innerHTML = document.getElementById("apellido").value;
+        table.rows[3].cells[1].innerHTML = document.getElementById("email").value;
+        table.rows[4].cells[1].innerHTML = document.getElementById("telefono").value;
+        table.rows[5].cells[1].innerHTML = document.getElementById("edad").value;
+        table.rows[6].cells[1].innerHTML = document.getElementById("direccion").value;
+        table.rows[7].cells[1].innerHTML = document.getElementById("provincia").value;
+        table.rows[8].cells[1].innerHTML = document.getElementById("cp").value;
+     }
+    </script>
 </body>
 </html>
