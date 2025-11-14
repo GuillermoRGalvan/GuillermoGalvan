@@ -67,3 +67,20 @@ aside {
 p{
     font-family: "Gravitas One", serif;
 }
+
+.masTexto{
+    display: none;
+}
+
+.botonLeerMas{
+    padding: 15px 60px;
+    cursor: pointer;
+}
+
+.texto.mostrarMas .masTexto{
+    display: inline;
+}
+
+.texto.mostrarMas .puntos{
+    display: none;
+}
